@@ -2,19 +2,13 @@ import Button from '@restart/ui/esm/Button';
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useData from '../../../Hooks/useData';
 import Banner from '../Banner/Banner';
 import Package from '../Package/Package';
 import Packages from '../Packages/Packages';
 
 const Home = () => {
-    const [packages, setPackages] = useState([]);
-
-    useEffect( ()=>
-    {
-        fetch('http://localhost:5000/packages')
-        .then(res => res.json())
-        .then(data => setPackages(data.slice(0.6)))
-    },[])
+    const{packages} = useData()
     return (
         <div>
             <Banner></Banner>
@@ -30,7 +24,7 @@ const Home = () => {
                                         ></Package>)
                                 } 
                             </Row>
-                            <Link  to="/medicines">
+                            <Link  to="/packages">
                                 <Button>See More </Button>
                             </Link>
                         </div>

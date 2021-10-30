@@ -23,7 +23,7 @@ const Package = ({s_package}) => {
             
             <h6>{name}</h6>
             <div className="pb-4">
-            <Link to ={`/medidetails/${_id}`}>
+            <Link to ={`/details/${_id}`}>
                 <Button variant="primary">Book Now</Button>
             </Link>
             </div>
