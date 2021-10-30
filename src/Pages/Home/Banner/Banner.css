@@ -1,0 +1,18 @@
+.banner-body{
+    background-image: url("https://i.ibb.co/J7FtzXn/img-6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    padding-top: 20px;
+}
+.banner-h1{
+    font-size: 60px;
+}
+.banner-input:hover{
+    border: 3px solid red;
+    border-radius: 10px;
+}
+.input-btn{
+    background-color: green;
+}

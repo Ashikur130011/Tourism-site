@@ -28,6 +28,7 @@ const Home = () => {
                                 <Button>See More </Button>
                             </Link>
                         </div>
+                        
             </div>
         </div>
     );

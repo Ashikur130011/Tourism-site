@@ -8,7 +8,7 @@ const MyBooking = () => {
     const [bookings, setBookings] = useState([])
     const {user} = useAuth();
     useEffect( () => {
-        fetch(`http://localhost:5000/booking/${user.email}`)
+        fetch(`https://powerful-hollows-40819.herokuapp.com/booking/${user.email}`)
             .then(res => res.json())
             .then(data => setBookings(data))
     },[])
@@ -16,7 +16,7 @@ const MyBooking = () => {
 
     const bookingCancel = (id) =>{
         console.log(id);
-        axios.delete(`http://localhost:5000/booking/${id}`)
+        axios.delete(`https://powerful-hollows-40819.herokuapp.com/booking/${id}`)
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount === 1) {
@@ -27,20 +27,21 @@ const MyBooking = () => {
         })
     }
     return (
-        <div className="container m-5">
+        <div className="container my-5">
             <h1>My Bookings</h1>
-            <div className="p-2">
+            <div className="">
             {
                 bookings.map(booking => <Row
                 key= {booking._id}>
-                    <div className="col-md-2">{booking.Name}</div>
-                    <div className="col-md-3">{booking.Destination}</div>
-                    <div className="col-md-2">{booking.Date}</div>
-                    <div className="col-md-1">{booking.Adult}</div>
-                    <div className="col-md-1">{booking.Children}</div>
-                    <div className="col-md-3"><button className="bg-danger border-3 border-success text-white rounded-pill px-4 fw-bold" onClick={() => bookingCancel(booking._id)}>Cancel</button></div>
+                    <div className="col-md-2 p-2 bg-primary text-white">Name: {booking.Name}</div>
+                    <div className="col-md-3 p-2 bg-warning">Destination: {booking.Destination}</div>
+                    <div className="col-md-2 p-2 bg-success text-white">Date: {booking.Date}</div>
+                    <div className="col-md-1 p-2 bg-info text-white">Adult: {booking.Adult}</div>
+                    <div className="col-md-2 p-2 bg-primary text-white">Children: {booking.Children}</div>
+                    <div className="col-md-2"><button className="bg-danger border-3 border-success text-white rounded-pill px-4 fw-bold" onClick={() => bookingCancel(booking._id)}>Cancel</button></div>
                     
                 </Row>)
+                
             }
             </div>
         </div>

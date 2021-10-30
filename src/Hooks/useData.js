@@ -5,10 +5,15 @@ const useData = () => {
 
     useEffect( ()=>
     {
-        fetch('http://localhost:5000/packages')
+        fetch('https://powerful-hollows-40819.herokuapp.com/ticket')
         .then(res => res.json())
-        .then(data => setPackages(data))
+        .then(data => {
+            setPackages(data)
+            console.log(data);
+        })
+        
     },[])
+    
     return {
         packages,
         setPackages

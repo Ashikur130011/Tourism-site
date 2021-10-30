@@ -12,6 +12,9 @@ import Register from './Pages/Login/Register/Register';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Footer from './Pages/Shared/Footer/Footer';
 import MyBooking from './Pages/MyBooking/MyBooking';
+import AboutUs from './Pages/AboutUs/AboutUs';
+import Contact from './Pages/Contact/Contact';
+import AddPackage from './Pages/AddPackage/AddPackage';
 
 function App() {
   return (
@@ -29,6 +32,15 @@ function App() {
         <PrivateRoute path="/packages">
           <Packages></Packages>
         </PrivateRoute>
+        <Route path="/about">
+          <AboutUs></AboutUs>
+        </Route>
+        <Route path="/contact">
+          <Contact></Contact>
+        </Route>
+        <Route path="/addPackage">
+          <AddPackage></AddPackage>
+        </Route>
         <PrivateRoute path="/details/:packageId">
           <PackageDetail></PackageDetail>
         </PrivateRoute>

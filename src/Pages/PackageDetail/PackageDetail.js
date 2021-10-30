@@ -14,7 +14,7 @@ const PackageDetail = () => {
 console.log(packageId);
     useEffect( ()=>
     {
-        fetch(`http://localhost:5000/packages/${packageId}`)
+        fetch(`https://powerful-hollows-40819.herokuapp.com/packages/${packageId}`)
         .then(res => res.json())
         .then(data => setPackages(data))
     },[])
@@ -23,8 +23,8 @@ console.log(packageId);
 
   const onSubmit = data => {
     console.log(data);
-
-    axios.post('http://localhost:5000/booking', data)
+    data["Destination"]=packages.location || "";
+    axios.post('https://powerful-hollows-40819.herokuapp.com/booking', data)
       .then(res => {
           console.log(res.data);
         if(res.data.insertedId) {
@@ -64,8 +64,8 @@ console.log(packageId);
                     </div>
                 </div>
             </div>
-
-            <div className="w-75 border border-4 border-warning shadow-lg mx-auto mt-5">
+            {/* ------Booking Form----- */}
+          <div className="w-75 border border-4 border-warning shadow-lg mx-auto mt-5">
           <h2 className="fw-bold text-warning pt-4">Book Your Trip Now</h2>
           <form
             onSubmit={handleSubmit(onSubmit)}
