@@ -11,6 +11,7 @@ import PackageDetail from './Pages/PackageDetail/PackageDetail';
 import Register from './Pages/Login/Register/Register';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Footer from './Pages/Shared/Footer/Footer';
+import MyBooking from './Pages/MyBooking/MyBooking';
 
 function App() {
   return (
@@ -25,11 +26,14 @@ function App() {
         <Route path="/home">
           <Home></Home>
         </Route>
-        <Route path="/packages">
+        <PrivateRoute path="/packages">
           <Packages></Packages>
-        </Route>
+        </PrivateRoute>
         <PrivateRoute path="/details/:packageId">
           <PackageDetail></PackageDetail>
+        </PrivateRoute>
+        <PrivateRoute path="/myBooking">
+          <MyBooking></MyBooking>
         </PrivateRoute>
         <Route path='/login'>
           <Login></Login>

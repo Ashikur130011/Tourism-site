@@ -1,13 +1,13 @@
 import React from 'react';
-
+import f_logo from '../../../images/logo.png';
+import './Footer.css'
 const Footer = () => {
     return (
         <div>
             <div className="footer-part">
             <div className="row container mx-auto py-3">
             <div className="col-md-3">
-                <h1 className="footer-head">Better Life</h1>
-                
+                <img src={f_logo} alt="" />
                 <p>Better Life is a good choice for all medical facilities, online pharmacy, raise awareness of (2019-nCoV).</p>
                 <h6> Opentime : Monday - Friday: 9:00-20.00</h6>
             </div>
@@ -28,7 +28,7 @@ const Footer = () => {
                 <h6>Our Shop</h6>
             </div>
             <div className="col-md-3">
-                <h2 className="footer-head">FOLLOW WITH US</h2>
+                <h2 className="footer-head">FOLLOW US</h2>
                 <h6> Address: 58 A, East Madison Street, Baltimore, Call us: (01) +911 45658687</h6>
                 <h5>MD, USA 4508</h5>
                 <p> betterlife@gmail.com</p>
