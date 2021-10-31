@@ -72,7 +72,7 @@ const Home = () => {
                 {/* -------------- */}
                 <div>
                   <h1>Top <span className="text-danger">Branding</span> For This Month</h1>
-<Carousel className="mb-5 slider mx-auto" style={{height:"400px"}}>
+<Carousel className="mb-5 slider mx-auto d-md-block d-none" style={{height:"400px"}}>
   <Carousel.Item>
     <img
       className="d-block w-100"

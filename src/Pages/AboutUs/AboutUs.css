@@ -1,8 +1,10 @@
 @media only screen and (max-width: 768px) {
-    img {
+    .about img {
       width: 300px;
     };
-    .google-img{
-        width: 20px;
-    }
+    
+    /* .banner-icon{
+      width: 50px;
+        
+    } */
   }
