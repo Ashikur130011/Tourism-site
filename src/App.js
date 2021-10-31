@@ -14,7 +14,9 @@ import Footer from './Pages/Shared/Footer/Footer';
 import MyBooking from './Pages/MyBooking/MyBooking';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import Contact from './Pages/Contact/Contact';
-import AddPackage from './Pages/AddPackage/AddPackage';
+import AddPackage from './Pages/Admin/AddPackage/AddPackage';
+import ManageBooking from './Pages/Admin/ManageBooking/ManageBooking';
+
 
 function App() {
   return (
@@ -44,9 +46,13 @@ function App() {
         <PrivateRoute path="/details/:packageId">
           <PackageDetail></PackageDetail>
         </PrivateRoute>
+
         <PrivateRoute path="/myBooking">
           <MyBooking></MyBooking>
         </PrivateRoute>
+        <Route path="/manage">
+          <ManageBooking></ManageBooking>
+        </Route>
         <Route path='/login'>
           <Login></Login>
         </Route>

@@ -22,7 +22,7 @@ const MyBooking = () => {
           if (data.deletedCount === 1) {
             const restItem = bookings.filter((event) => event._id !== id);
             setBookings(restItem);
-            alert("Event deleted successfully");
+            alert("Booking deleted successfully");
           }
         })
     }
@@ -33,11 +33,11 @@ const MyBooking = () => {
             {
                 bookings.map(booking => <Row
                 key= {booking._id}>
-                    <div className="col-md-2 p-2 bg-primary text-white">Name: {booking.Name}</div>
-                    <div className="col-md-3 p-2 bg-warning">Destination: {booking.Destination}</div>
-                    <div className="col-md-2 p-2 bg-success text-white">Date: {booking.Date}</div>
-                    <div className="col-md-1 p-2 bg-info text-white">Adult: {booking.Adult}</div>
-                    <div className="col-md-2 p-2 bg-primary text-white">Children: {booking.Children}</div>
+                    <div className="col-md-2 p-2 bg-primary border-bottom text-white">Name: {booking.Name}</div>
+                    <div className="col-md-2 p-2 border-bottom border-dark bg-success text-white">Date: {booking.Date}</div>
+                    <div className="col-md-1 p-2 border-bottom border-dark bg-info text-white">Adult: {booking.Adult}</div>
+                    <div className="col-md-2 p-2 border-bottom border-dark bg-primary text-white">Children: {booking.Children}</div>
+                    <div className="col-md-3 p-2 border-bottom border-dark bg-warning">Destination: {booking.Destination}</div>
                     <div className="col-md-2"><button className="bg-danger border-3 border-success text-white rounded-pill px-4 fw-bold" onClick={() => bookingCancel(booking._id)}>Cancel</button></div>
                     
                 </Row>)

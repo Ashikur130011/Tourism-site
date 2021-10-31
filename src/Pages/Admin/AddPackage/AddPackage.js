@@ -1,9 +1,10 @@
 import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import Packages from '../Home/Packages/Packages';
-import './AddPackage.css';
-import Img from '../../../src/images/img-3.jpg';
+import Packages from '../../Home/Packages/Packages';
+import Img from '../../../images/img-3.jpg';
+import './AddPackage.css'
+
 
 const AddPackage = () => {
     const { register, handleSubmit, reset } = useForm();

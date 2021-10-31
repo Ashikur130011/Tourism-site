@@ -27,8 +27,7 @@ const Home = () => {
                             <Link  to="/packages">
                                 <Button>See More </Button>
                             </Link>
-                        </div>
-                        
+                        </div> 
             </div>
         </div>
     );

@@ -8,7 +8,8 @@ import './Banner.css'
 
 const Banner = () => {
     return (
-        <div className="container banner-body">
+        <div className="banner-body">
+            <div className="container">
             <div>
                 <h1>Plan Your Travel Now!</h1>
                 <p>Experience the various exciting tour and travel packages and Make hotel reservations, find vacation packages, search cheap hotels and events</p>
@@ -37,6 +38,7 @@ const Banner = () => {
                     <p>Hotel</p>
                 </div>
             </div>
+        </div>
         </div>
     );
 };

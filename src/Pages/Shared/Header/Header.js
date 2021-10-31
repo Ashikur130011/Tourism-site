@@ -21,6 +21,7 @@ const Header = () => {
                 <Nav.Link as={Link} to="/about" className="fw-bold text-black" >About Us</Nav.Link>
                 <Nav.Link as={Link} to="/contact" className="fw-bold text-black" >Contact</Nav.Link>
                 <Nav.Link as={Link} to="/myBooking" className="fw-bold text-black" >My Booking</Nav.Link>
+                <Nav.Link as={Link} to="/manage" className="fw-bold text-black" >Manage Booking</Nav.Link>
                 
 
                 {/* logged in person's identity */}
