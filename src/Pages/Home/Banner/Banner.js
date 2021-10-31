@@ -10,20 +10,20 @@ const Banner = () => {
     return (
         <div>
             <div className="banner-body">
-            <div className="container">
-            <div>
-                <h1 className="mt-5 mb-5 fst-italic fw-bold text-danger">Plan Your Travel Now!</h1>
-                <p className="w-50 my-5 mx-auto fw-bold text-white fs-5">Experience the various exciting tour and travel packages and Make hotel reservations, find vacation packages, search cheap hotels and events</p>
-            </div>
-            <div class="input-group w-75 mx-auto">
-            <input type="text" className="me-2 py-2" placeholder="Enter city" />
-            <input type="text" className="me-2 w-50" placeholder="Search over a million tour and travels, sight seeings, hotels and m..." />
-            <input type="button" className="w-25 input-btn" value="Search" />
-            </div>
+               <div className="container">
+                    <div>
+                        <h1 className="mt-5 mb-5 fst-italic fw-bold text-danger">Plan Your Travel Now!</h1>
+                        <p className="w-75 my-5 mx-auto fw-bold text-white fs-5">Experience the various exciting tour and travel packages and Make hotel reservations, find vacation packages, search cheap hotels and events</p>
+                    </div>
+                    <div class="input-group w-75 mx-auto">
+                        <input type="text" className="me-2" placeholder="Enter city" />
+                        <input type="text" className="me-2 w-50" placeholder="Search over a million tour and travels, sight seeings, hotels and m..." />
+                        <input type="button" className="w-25 input-btn" value="Search" />
+                    </div>
             
             
-        </div>
-        </div>
+                </div>
+            </div>
         <div className="row w-50 mt-5 mx-auto">
         <div className="col-md-3 ">
             <img src={tour} alt="" className="banner-icon" width="60" />

@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './Pages/Home/Home/Home';
@@ -11,11 +10,8 @@ import PackageDetail from './Pages/PackageDetail/PackageDetail';
 import Register from './Pages/Login/Register/Register';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Footer from './Pages/Shared/Footer/Footer';
-import MyBooking from './Pages/MyBooking/MyBooking';
 import AboutUs from './Pages/AboutUs/AboutUs';
 import Contact from './Pages/Contact/Contact';
-import AddPackage from './Pages/Admin/AddPackage/AddPackage';
-import ManageBooking from './Pages/Admin/ManageBooking/ManageBooking';
 import Admin from './Pages/Admin/Admin/Admin';
 
 
@@ -43,10 +39,6 @@ function App() {
         </Route>
         <PrivateRoute path="/details/:packageId">
           <PackageDetail></PackageDetail>
-        </PrivateRoute>
-
-        <PrivateRoute path="/myBooking">
-          <MyBooking></MyBooking>
         </PrivateRoute>
         <PrivateRoute path="/admin">
           <Admin></Admin>

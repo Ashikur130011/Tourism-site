@@ -27,7 +27,7 @@ const AddPackage = () => {
           <form onSubmit={handleSubmit(onSubmit)} className="border border-3 border-primary shadow-lg p-4 add-bg">
           
             <div className="row ">
-            <h1 className="p-4 text-primary">Add New Package</h1>
+            <h1 className="p-4 text-danger">Add New Package</h1>
                 
               <div className="col-md-6">
                 <h5 className="fw-bold text-danger">Location</h5>

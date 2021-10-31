@@ -25,9 +25,15 @@
     color: white;
     border-radius: 15px;
 }
-/* .carousel-inner{
-    height: 500px;
-    width: 300px;
-} */
+.slider{
+    width: 800px;
+    border-radius: 15px;
+}
+.slider img{
+    height: 400px;
+    width: 800px;
+    border-radius: 15px;
+    
+}
 
 

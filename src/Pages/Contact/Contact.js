@@ -3,7 +3,6 @@ import { Col, Form, Row, Button, Card } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
     faAddressCard, 
-    faBuilding, 
     faComment, 
     faPhone, 
     faTasks 
@@ -27,7 +26,7 @@ const Contact = () => {
                     </p>
                 </div>
                 <div className="col-md-7 contact-form">
-                    <h1>Contact Us <FontAwesomeIcon icon={faTasks}/></h1>
+                    <h1><span className="text-danger">Contact</span> Us <FontAwesomeIcon icon={faTasks}/></h1>
                         <Form style={{ width: '80%' }} className="contact-form p-3 mx-auto">
                             <Form>
                                 <Row className="mb-4">

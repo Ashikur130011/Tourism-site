@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import { Row, Spinner, Table } from 'react-bootstrap';
+import { Row, Spinner } from 'react-bootstrap';
 
 const ManageBooking = () => {
     const [bookings, setBookings] = useState([]);
-    
+    const [spinner,setSpinner]=useState(true)
 
     useEffect( () => {
+        setSpinner(true)
         fetch('https://powerful-hollows-40819.herokuapp.com/booking')
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             setBookings(data)
+            setSpinner(false)
         })
     },[]);
     const handleBookingDelete = (id) => {
@@ -33,9 +34,9 @@ const ManageBooking = () => {
         <div className="my-4">
             
          <div>
-             <h1 className="text-center">Manage Booking</h1>
+             <h1 className="text-center"><span className="text-danger">Manage</span> Booking</h1>
          {
-                bookings.map(booking => <Row
+            spinner? <Spinner animation="grow" variant="success" /> : bookings.map(booking => <Row
                 key= {booking._id}>
                     <div className="g-2"></div>
                     <div className="col-md-3 p-2 bg-secondary border-bottom text-white">Name: {booking.Name}</div>
@@ -44,9 +45,8 @@ const ManageBooking = () => {
                    
                     <div className="col-md-2"><button className="bg-danger border-3 border-success text-white rounded-pill px-4 fw-bold" onClick={() => handleBookingDelete(booking._id)}>Cancel</button></div>
                     
-                </Row>)
-                
-            }
+            </Row>)
+         }
          </div>
       </div>
     );

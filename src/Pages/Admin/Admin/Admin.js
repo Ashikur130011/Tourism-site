@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import MyBooking from '../../MyBooking/MyBooking';
 import AddPackage from '../AddPackage/AddPackage';
 import ManageBooking from '../ManageBooking/ManageBooking';
-import './Admin.css'
+import './Admin.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faPlus, faServer, faClipboardList, faEdit} from '@fortawesome/free-solid-svg-icons';
 
 const Admin = () => {
 
@@ -22,23 +24,23 @@ const Admin = () => {
     return (
         <div className="container">
             <div className="row g-5">
-            <section className="col-md-3 container">
-                <h3 className="mt-5">Dashbord</h3>
+            <section className="col-md-3">
+                <h3 className="mt-5"><FontAwesomeIcon icon={faServer}/> Dashbord</h3>
                 <div className="m-4 dashbord text-start p-3">
 
                 <div className="" onClick={handleMyBooking}
                 style={{ cursor: "pointer", padding: "10px" }}>
-                    <h4>My Booking</h4>
+                    <h5><FontAwesomeIcon icon={faClipboardList}/>My Booking</h5>
                 </div>
 
                 <div className="" onClick={handleManageBooking}
                 style={{ cursor: "pointer", padding: "10px" }}>
-                    <h4>Manage Booking</h4>
+                    <h5><FontAwesomeIcon icon={faEdit}/>Manage Booking</h5>
                 </div>
 
                 <div className="" onClick={handleAddPackage}
                 style={{ cursor: "pointer", padding: "10px" }}>
-                    <h4>Add Package</h4>
+                    <h5><FontAwesomeIcon icon={faPlus}/>Add Package</h5>
                 </div>
                 </div>
             </section>
