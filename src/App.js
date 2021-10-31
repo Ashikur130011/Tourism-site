@@ -35,6 +35,9 @@ function App() {
         <PrivateRoute path="/packages">
           <Packages></Packages>
         </PrivateRoute>
+        <Route path="/contact">
+          <Contact></Contact>
+        </Route>
         <Route path="/about">
           <AboutUs></AboutUs>
         </Route>

@@ -24,7 +24,7 @@ const ManageBooking = () => {
           .then((data) => {
               if (data.deletedCount === 1) {
                   const restEvents = bookings.filter(service => service._id !== id);
-                  alert('Booking deleted successfully!!')
+                  alert('Are you sure?')
                     setBookings(restEvents);
               }
           });

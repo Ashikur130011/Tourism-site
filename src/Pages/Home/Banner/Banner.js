@@ -12,8 +12,8 @@ const Banner = () => {
             <div className="banner-body">
             <div className="container">
             <div>
-                <h1 className="mt-5 mb-4 fst-italic fw-bold">Plan Your Travel Now!</h1>
-                <p className="w-50 mx-auto fw-bold text-white fs-5">Experience the various exciting tour and travel packages and Make hotel reservations, find vacation packages, search cheap hotels and events</p>
+                <h1 className="mt-5 mb-5 fst-italic fw-bold text-danger">Plan Your Travel Now!</h1>
+                <p className="w-50 my-5 mx-auto fw-bold text-white fs-5">Experience the various exciting tour and travel packages and Make hotel reservations, find vacation packages, search cheap hotels and events</p>
             </div>
             <div class="input-group w-75 mx-auto">
             <input type="text" className="me-2 py-2" placeholder="Enter city" />
