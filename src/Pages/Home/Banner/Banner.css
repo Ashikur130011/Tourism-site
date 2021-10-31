@@ -3,16 +3,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    height: 80vh;
     padding-top: 20px;
 }
-.banner-h1{
-    font-size: 60px;
+.banner-icon{
+    border: 1px solid rgb(243, 9, 9);
+    padding: 8px;
+    
 }
-.banner-input:hover{
-    border: 3px solid red;
-    border-radius: 10px;
-}
-.input-btn{
-    background-color: green;
+.banner-icon:hover{
+    background-color: red;
 }

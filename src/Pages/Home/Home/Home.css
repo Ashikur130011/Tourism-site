@@ -1,0 +1,27 @@
+.bg_1{
+    background-image: url("https://i.ibb.co/J7FtzXn/img-6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 55vh;
+    color: white;
+    border-radius: 15px;
+}
+.bg_2{
+    background-image: url("https://i.ibb.co/wr6jQHX/Dubai-Marina-from-a-high-view-showing-the-boats-sea-and-the-city-scape.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 55vh;
+    color: white;
+    border-radius: 15px;
+}
+.bg_3{
+    background-image: url("https://i.ibb.co/qBhNWrq/Houses-of-Parliament-Westminster-palace-and-Big-Ben-tower-London-UK.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 55vh;
+    color: white;
+    border-radius: 15px;
+}

@@ -16,6 +16,7 @@ import AboutUs from './Pages/AboutUs/AboutUs';
 import Contact from './Pages/Contact/Contact';
 import AddPackage from './Pages/Admin/AddPackage/AddPackage';
 import ManageBooking from './Pages/Admin/ManageBooking/ManageBooking';
+import Admin from './Pages/Admin/Admin/Admin';
 
 
 function App() {
@@ -37,12 +38,6 @@ function App() {
         <Route path="/about">
           <AboutUs></AboutUs>
         </Route>
-        <Route path="/contact">
-          <Contact></Contact>
-        </Route>
-        <Route path="/addPackage">
-          <AddPackage></AddPackage>
-        </Route>
         <PrivateRoute path="/details/:packageId">
           <PackageDetail></PackageDetail>
         </PrivateRoute>
@@ -50,9 +45,9 @@ function App() {
         <PrivateRoute path="/myBooking">
           <MyBooking></MyBooking>
         </PrivateRoute>
-        <Route path="/manage">
-          <ManageBooking></ManageBooking>
-        </Route>
+        <PrivateRoute path="/admin">
+          <Admin></Admin>
+        </PrivateRoute>
         <Route path='/login'>
           <Login></Login>
         </Route>

@@ -1,5 +1,9 @@
 .add-bg{
+    background-image: url("https://i.ibb.co/bJQcxTB/View-of-Airplane-s-Wings-on-Sunset.jpg");
+    
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: center;
+    background-position: center;
+    height: 70vh;
+    
 }

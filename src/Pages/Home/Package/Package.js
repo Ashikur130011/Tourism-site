@@ -17,14 +17,14 @@ const Package = ({s_package}) => {
                 {location}
                 </Card.Title>
             <Card.Text>
-            {description.slice(0,150)}
+            {description.slice(0,140)}
             </Card.Text>
             </Card.Body>
             
             <h6>{name}</h6>
-            <div className="pb-4">
+            <div className="">
             <Link to ={`/details/${_id}`}>
-                <Button variant="primary">Book Now</Button>
+                <Button variant="primary" className="bg-primary border-3 border-success text-white rounded-pill px-2">Book Now</Button>
             </Link>
             </div>
             </Card>

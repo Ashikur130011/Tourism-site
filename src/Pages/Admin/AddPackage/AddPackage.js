@@ -24,7 +24,7 @@ const AddPackage = () => {
     return (
         <div >
             <div className="container py-5">
-          <form onSubmit={handleSubmit(onSubmit)} style={{backgroundImage: `url(${Img})`}} className="border border-3 border-primary shadow-lg p-4 add-bg">
+          <form onSubmit={handleSubmit(onSubmit)} className="border border-3 border-primary shadow-lg p-4 add-bg">
           
             <div className="row ">
             <h1 className="p-4 text-primary">Add New Package</h1>
