@@ -31,25 +31,48 @@ const MyBooking = () => {
         })
     }
     return (
-        <div className="my-5">
-
-        <h1>My <span className="text-danger">Bookings</span></h1>
-            <div className=" ">
-            {
-                spinner? <Spinner animation="grow" variant="success" />:bookings.map(booking => 
-                    <Row
-                        key= {booking._id}>
-                        <div className="g-2"></div>
-                        <div className="col-md-2 p-2 bg-secondary border-bottom text-white fw-bold">Name: {booking.Name}</div>
-                        <div className="col-md-2 p-2 border-bottom border-dark booking-bg text-white">Date: {booking.Date}</div>
-                        <div className="col-md-1 p-2 border-bottom border-dark bg-secondary text-white">Adult: {booking.Adult}</div>
-                        <div className="col-md-1 p-2 border-bottom border-dark booking-bg text-white">Child: {booking.Children}</div>
-                        <div className="col-md-3 p-2 border-bottom border-secondary bg-secondary text-white fw-bold">Destination: {booking.Destination}</div>
-                        <div className="col-md-2"><button className="bg-danger border-3 border-success text-white rounded-pill px-4 fw-bold" onClick={() => bookingCancel(booking._id)}>Cancel</button></div>
-                    </Row>)
-            }
-            </div>
-        </div>
+      <div className="my-5">
+        <h1>
+          My <span className="text-danger">Bookings</span>
+        </h1>
+        {spinner ? (
+          <Spinner animation="grow" variant="success" />
+        ) : (
+          <div class="table-responsive">
+            <table class="table ">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Audult</th>
+                  <th scope="col">Child</th>
+                  <th scope="col">Destination</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              {bookings.map((booking) => (
+                <tbody>
+                  <tr>
+                    <td>{booking.Name}</td>
+                    <td>{booking.Date}</td>
+                    <td>{booking.Adult}</td>
+                    <td>{booking.Children}</td>
+                    <td>{booking.Destination}</td>
+                    <td>
+                      <button
+                        className="bg-danger border-success text-white rounded px-2 fw-bold"
+                        onClick={() => bookingCancel(booking._id)}
+                      >
+                        Cancel
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              ))}
+            </table>
+          </div>
+        )}
+      </div>
     );
 };
 

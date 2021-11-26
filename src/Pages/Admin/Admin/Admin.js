@@ -22,11 +22,11 @@ const Admin = () => {
     }
     
     return (
-        <div className="container">
-            <div className="row g-5">
+        <div className="mx-5">
+            <div className="row ">
             <section className="col-md-3">
                 <h3 className="mt-5"><FontAwesomeIcon icon={faServer}/> Dashbord</h3>
-                <div className="m-4 dashbord text-start p-3">
+                <div className=" dashbord text-start ">
 
                 <div className="" onClick={handleMyBooking}
                 style={{ cursor: "pointer", padding: "10px" }}>

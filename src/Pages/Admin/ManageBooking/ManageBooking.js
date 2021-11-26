@@ -31,23 +31,45 @@ const ManageBooking = () => {
           });
     }
     return (
-        <div className="my-4">
-            
-         <div>
-             <h1 className="text-center"><span className="text-danger">Manage</span> Booking</h1>
-         {
-            spinner? <Spinner animation="grow" variant="success" /> : bookings.map(booking => <Row
-                key= {booking._id}>
-                    <div className="g-2"></div>
-                    <div className="col-md-3 p-2 bg-secondary border-bottom text-white">Name: {booking.Name}</div>
-                    <div className="col-md-4 p-2 border-bottom border-dark booking-bg">Destination: {booking.Destination}</div>
-                    <div className="col-md-2 p-2 border-bottom bg-secondary text-white">Date: {booking.Date}</div>
-                   
-                    <div className="col-md-2"><button className="bg-danger border-3 border-success text-white rounded-pill px-4 fw-bold" onClick={() => handleBookingDelete(booking._id)}>Cancel</button></div>
-                    
-            </Row>)
-         }
-         </div>
+      <div className="my-4">
+        <div>
+          <h1 className="text-center">
+            <span className="text-danger">Manage</span> Booking
+          </h1>
+          {spinner ? (
+            <Spinner animation="grow" variant="success" />
+          ) : (
+            <div class="table-responsive">
+              <table class="table ">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                {bookings.map((booking) => (
+                  <tbody>
+                    <tr>
+                      <td>{booking.Name}</td>
+                      <td>{booking.Date}</td>
+                      <td>{booking.Destination}</td>
+                      <td>
+                        <button
+                          className="bg-danger border-success text-white rounded px-2 fw-bold"
+                          onClick={() => handleBookingDelete(booking._id)}
+                        >
+                          Cancel
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                ))}
+              </table>
+            </div>
+          )}
+        </div>
       </div>
     );
 };

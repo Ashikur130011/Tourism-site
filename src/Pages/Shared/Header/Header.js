@@ -21,7 +21,7 @@ const Header = () => {
                 <Nav.Link as={Link} to="/contact" className="fw-bold text-black" >Contact</Nav.Link>
                 <Nav.Link as={Link} to="/about" className="fw-bold text-black" >About Us</Nav.Link>
                 
-               {user?.uid&& <Nav.Link as={Link} to="/admin" className="fw-bold text-black" >Admin</Nav.Link>}
+               {user?.uid&& <Nav.Link as={Link} to="/admin" className="fw-bold text-black" >Dashboard</Nav.Link>}
                 
 
                 {/* logged in person's identity */}
