@@ -13,7 +13,7 @@ const Review = () => {
          .then((res) => {
            console.log(res.data);
            if (res.data.insertedId) {
-             alert("Comment added successfully");
+             alert("Your Comment added successfully");
              reset();
            }
          });
