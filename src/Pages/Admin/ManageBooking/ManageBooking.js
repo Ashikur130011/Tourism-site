@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Row, Spinner } from 'react-bootstrap';
+import { Spinner } from 'react-bootstrap';
 
 const ManageBooking = () => {
     const [bookings, setBookings] = useState([]);

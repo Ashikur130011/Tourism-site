@@ -2,7 +2,6 @@ import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import Packages from '../../Home/Packages/Packages';
-import Img from '../../../images/img-3.jpg';
 import './AddPackage.css'
 
 

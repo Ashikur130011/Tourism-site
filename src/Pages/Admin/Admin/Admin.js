@@ -4,7 +4,8 @@ import AddPackage from '../AddPackage/AddPackage';
 import ManageBooking from '../ManageBooking/ManageBooking';
 import './Admin.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faPlus, faServer, faClipboardList, faEdit} from '@fortawesome/free-solid-svg-icons';
+import {  faPlus, faServer, faClipboardList, faEdit, faCommentDots} from '@fortawesome/free-solid-svg-icons';
+import Review from '../Review/Review';
 
 const Admin = () => {
 
@@ -20,6 +21,9 @@ const Admin = () => {
     const handleAddPackage = (e) => {
         setAdmin(e.target.innerText);
     }
+    const handleAddReview = e => {
+        setAdmin(e.target.innerText);
+    }
     
     return (
         <div className="mx-5">
@@ -30,25 +34,30 @@ const Admin = () => {
 
                 <div className="" onClick={handleMyBooking}
                 style={{ cursor: "pointer", padding: "10px" }}>
-                    <h5><FontAwesomeIcon icon={faClipboardList}/>My Booking</h5>
+                    <h5><FontAwesomeIcon icon={faClipboardList}/> My Booking</h5>
                 </div>
 
                 <div className="" onClick={handleManageBooking}
                 style={{ cursor: "pointer", padding: "10px" }}>
-                    <h5><FontAwesomeIcon icon={faEdit}/>Manage Booking</h5>
+                    <h5><FontAwesomeIcon icon={faEdit}/> Manage Booking</h5>
                 </div>
 
                 <div className="" onClick={handleAddPackage}
                 style={{ cursor: "pointer", padding: "10px" }}>
-                    <h5><FontAwesomeIcon icon={faPlus}/>Add Package</h5>
+                    <h5><FontAwesomeIcon icon={faPlus}/> Add Package</h5>
+                </div>
+
+                <div className="" onClick={handleAddReview}
+                style={{ cursor: "pointer", padding: "10px" }}>
+                    <h5><FontAwesomeIcon icon={faCommentDots}/> Add Review</h5>
                 </div>
                 </div>
             </section>
             <section className="col-md-9">
-                    {(admin==='My Booking'&& <MyBooking/>) 
-                    || (admin==='Manage Booking'&& <ManageBooking/>)
-                    || (admin==='Add Package'&& <AddPackage/>)
-                    
+                    {(admin===' My Booking'&& <MyBooking/>) 
+                    || (admin===' Manage Booking'&& <ManageBooking/>)
+                    || (admin===' Add Package'&& <AddPackage/>)
+                    || (admin ===' Add Review'&& <Review/>)
                     }
             </section>
             </div>
