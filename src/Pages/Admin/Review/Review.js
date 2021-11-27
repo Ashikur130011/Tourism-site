@@ -8,13 +8,15 @@ const Review = () => {
 
      const onSubmit = (data) => {
        console.log(data);
-       axios.post("http://localhost:7000/comments", data).then((res) => {
-         console.log(res.data);
-         if (res.data.insertedId) {
-           alert("Comment added successfully");
-           reset();
-         }
-       });
+       axios
+         .post("https://powerful-hollows-40819.herokuapp.com/comments", data)
+         .then((res) => {
+           console.log(res.data);
+           if (res.data.insertedId) {
+             alert("Comment added successfully");
+             reset();
+           }
+         });
      };
     return (
       <div className="container py-5 w-75 mx-auto">
